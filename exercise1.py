@@ -14,4 +14,15 @@ for i in range(5):
 
 print("Points multiplied by 5:", points)
 
+average = np.mean(points)
+print("Average of points:", average)
+sum = np.sum(points)
+print("Sum of points:", sum)
 
+def dzielenie(points):
+    return points[i] / 3
+
+for i in range(5):
+    points[i] = dzielenie(points)
+
+print("Points divided by 3:", points)
