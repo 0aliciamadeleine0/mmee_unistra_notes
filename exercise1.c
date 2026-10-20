@@ -1,11 +1,44 @@
 #include <stdio.h>
 
-int exercise1() {
+int main(void)
+{
     int points[5];
-    printf("Choose 5 numbers:\n");
-    scanf("%d %d %d %d %d", &points[0], &points[1], &points[2], &points[3], &points[4]);
-    printf("%d %d %d %d %d\n", points[0], points[1], points[2], points[3], points[4]);
+    int i;
+    int sum = 0;
+    double average;
 
-    printf("Points multiply by 5 %d %d %d %d %d\n", points[0], points[1], points[2], points[3], points[4]);
+    printf("Choose 5 numbers:\n");
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &points[i]);
+    }
+
+    for (i = 0; i < 5; i++) {
+        points[i] *= 5;
+    }
+
+    printf("Points multiplied by 5:");
+    for (i = 0; i < 5; i++) {
+        printf(" %d", points[i]);
+    }
+    printf("\n");
+
+    for (i = 0; i < 5; i++) {
+        sum += points[i];
+    }
+    average = (double)sum / 5;
+
+    printf("Average of points: %.2f\n", average);
+    printf("Sum of points: %d\n", sum);
+
+    for (i = 0; i < 5; i++) {
+        points[i] /= 3;
+    }
+
+    printf("Points divided by 3:");
+    for (i = 0; i < 5; i++) {
+        printf(" %d", points[i]);
+    }
+    printf("\n");
+
     return 0;
 }
